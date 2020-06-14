@@ -9,7 +9,7 @@ driver = webdriver.Chrome()
 pages = [str(i) for i in range(1,23)]
 
 #Alabama
-#driver.get("https://www.bizbuysell.com/alabama-businesses-for-sale/?q=aXI9MSZzcGlkPTEmdz1x")
+driver.get("https://www.bizbuysell.com/alabama-businesses-for-sale/?q=aXI9MSZzcGlkPTEmdz1x")
 #Alaska
 #driver.get("https://www.bizbuysell.com/alaska-businesses-for-sale/?q=aXI9MSZzcGlkPTEmdz1x")
 #Arizona
@@ -20,7 +20,7 @@ pages = [str(i) for i in range(1,23)]
 #driver.get("https://www.bizbuysell.com/california-businesses-for-sale/?q=aXI9MSZzcGlkPTEmdz1x")
 #driver.get("https://www.bizbuysell.com/california-businesses-for-sale/28/?q=aXI9MSZsc3JfcmxicG49MzAmc3BpZD0xJnc9cQ%3d%3d")
 #Colorado
-driver.get("https://www.bizbuysell.com/colorado-businesses-for-sale/?q=aXI9MSZzcGlkPTEmdz1x")
+#driver.get("https://www.bizbuysell.com/colorado-businesses-for-sale/?q=aXI9MSZzcGlkPTEmdz1x")
 #Connecticut
 #driver.get("https://www.bizbuysell.com/connecticut-businesses-for-sale/?q=aXI9MSZzcGlkPTEmdz1x")
 #Vermont
@@ -38,7 +38,7 @@ for page in pages:
         for container in containers:
             url = container.get_attribute("href")
             title = container.get_attribute("title")
-            dataframe = dataframe.append({'US-State': 'Colorado','Title': title, 'URL': url}, ignore_index=True)
+            dataframe = dataframe.append({'US-State': 'Alabama','Title': title, 'URL': url}, ignore_index=True)
 
         nextPageButton = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "bbsPager_next")))
         ref = nextPageButton.get_attribute("href")
