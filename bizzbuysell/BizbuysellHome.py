@@ -13,4 +13,5 @@ options = select.options
 for option in options:
     print(option.text)
 
+
 driver.close()
